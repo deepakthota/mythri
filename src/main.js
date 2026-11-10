@@ -2,6 +2,7 @@
 'use strict';
 import MENU from './menu.json';
 import CATEGORIES from './categories.json';
+import {buildDishAvatar} from './dish-images.js';
 const $=id=>document.getElementById(id);
 const featuredNames=['Hyderabadi Chicken Dum Biryani','Butter Chicken','Masala Dosa','Paneer Tikka'];
 const fmt=x=>new Intl.NumberFormat('en-AU',{style:'currency',currency:'AUD',minimumFractionDigits:Number.isInteger(x)?0:2,maximumFractionDigits:2}).format(x);
@@ -9,8 +10,7 @@ const featured=$('featured-dishes');
 for(const name of featuredNames){
  const dish=MENU.find(item=>item.name===name);if(!dish)continue;
  const card=document.createElement('article');card.className='featured-dish';
- const avatar=document.createElement('div');avatar.className='dish-avatar featured-avatar';avatar.setAttribute('aria-hidden','true');avatar.textContent='✳';
- const dot=document.createElement('span');dot.className='diet-dot '+(dish.veg?'veg':'nonveg');dot.setAttribute('aria-hidden','true');avatar.append(dot);
+ const avatar=buildDishAvatar(dish,true);
  const info=document.createElement('div');info.className='featured-dish-info';
  const tag=document.createElement('span');tag.className='featured-category';tag.textContent=dish.cat;
  const h=document.createElement('h3');h.textContent=dish.name;
