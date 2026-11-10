@@ -10,6 +10,7 @@ if(js.includes('import MENU')||js.includes('import CATEGORIES'))throw Error('Fai
 writeFileSync(join(out,'assets/main.js'),js);
 copyFileSync(join(root,'src/styles.css'),join(out,'assets/styles.css'));
 copyFileSync(join(root,'src/menu-logic.js'),join(out,'assets/menu-logic.js'));
+copyFileSync(join(root,'src/dish-images.js'),join(out,'assets/dish-images.js'));
 let menuJs=read('src/menu-page.js').replace("import MENU from './menu.json';",`const MENU=${JSON.stringify(menu)};`).replace("import CATEGORIES from './categories.json';",`const CATEGORIES=${JSON.stringify(cats)};`);
 if(menuJs.includes('import MENU')||menuJs.includes('import CATEGORIES'))throw Error('Failed to inline menu page JSON');
 writeFileSync(join(out,'assets/menu-page.js'),menuJs);
