@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Vegetarian Entrées",
+    "sub": "Small plates, big beginnings"
+  },
+  {
+    "name": "South Indian",
+    "sub": "From the southern table"
+  },
+  {
+    "name": "Indo-Chinese",
+    "sub": "A little heat, a little theatre"
+  },
+  {
+    "name": "Non-Veg Entrées",
+    "sub": "From the clay oven"
+  },
+  {
+    "name": "Vegetarian Curries",
+    "sub": "Comfort in every spoonful"
+  },
+  {
+    "name": "Chicken Curries",
+    "sub": "Slow simmered, deeply spiced"
+  },
+  {
+    "name": "Seafood",
+    "sub": "Coastal Indian inspiration"
+  },
+  {
+    "name": "Lamb & Goat",
+    "sub": "Rich, aromatic traditions"
+  },
+  {
+    "name": "Rice",
+    "sub": "The perfect accompaniment"
+  },
+  {
+    "name": "Noodles",
+    "sub": "Wok-tossed favourites"
+  },
+  {
+    "name": "Dum Biryanis",
+    "sub": "The art of layering flavour"
+  },
+  {
+    "name": "Special Biryanis",
+    "sub": "A signature flourish"
+  },
+  {
+    "name": "Breads",
+    "sub": "Fresh from the tandoor"
+  }
+]
