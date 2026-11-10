@@ -1,0 +1,15 @@
+import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from 'node:fs';
+import { join } from 'node:path';
+const root=process.cwd();const out=join(root,'dist');
+mkdirSync(join(out,'assets'),{recursive:true});
+const read=p=>readFileSync(join(root,p),'utf8');
+const menu=JSON.parse(read('src/menu.json'));
+const cats=JSON.parse(read('src/categories.json'));
+let js=read('src/main.js').replace("import MENU from './menu.json';", `const MENU=${JSON.stringify(menu)};`).replace("import CATEGORIES from './categories.json';", `const CATEGORIES=${JSON.stringify(cats)};`);
+if(js.includes('import MENU')||js.includes('import CATEGORIES'))throw Error('Failed to inline menu JSON');
+writeFileSync(join(out,'assets/main.js'),js);
+copyFileSync(join(root,'src/styles.css'),join(out,'assets/styles.css'));
+let html=read('index.html').replace('/src/styles.css','/assets/styles.css').replace('/src/main.js','/assets/main.js');
+writeFileSync(join(out,'index.html'),html);
+for(const file of ['_headers','robots.txt']) copyFileSync(join(root,'public',file),join(out,file));
+console.log(`Built site: ${menu.length} dishes, ${cats.length} categories → dist/`);
