@@ -1,3 +1,11 @@
+# v0.2.1 — menu polish
+
+- Title Case navigation and Table Enquiries on home and menu pages.
+- Color-coded menu avatars (solid green vegetarian / red non-vegetarian) across both pages.
+- Add three photo-matched, free-to-use Unsplash images for biryani, butter chicken and masala dosa, with avatar fallback and photo credits.
+- Let the From Our Kitchen photo fill the highlights column on laptop/desktop, with a larger minimum height at 1600px+ and bounded mobile sizing.
+- Add regression tests; keep menu content and reservation behavior unchanged.
+
 # Changelog
 
 ## v0.2.0 — Menu experience V3
