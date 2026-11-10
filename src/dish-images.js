@@ -20,8 +20,10 @@ export const getDishImage=(name)=>Object.prototype.hasOwnProperty.call(DISH_IMAG
 export function buildDishAvatar(dish,featured=false){
  const avatar=document.createElement('div');
  avatar.className='dish-avatar '+(dish.veg?'avatar-veg':'avatar-nonveg')+(featured?' featured-avatar':'');
- avatar.setAttribute('aria-hidden','true');
- avatar.textContent='✳';
+ const symbol=document.createElement('span');
+ symbol.textContent='✳';
+ symbol.setAttribute('aria-hidden','true');
+ avatar.append(symbol);
  const photo=getDishImage(dish.name);
  if(photo){
    const img=document.createElement('img');
