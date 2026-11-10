@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="theme-color" content="#F9F6F0">
+ <meta name="description" content="Explore the complete Mythri Indian Restaurant menu: 99 dishes across 13 categories. Browse biryanis, curries, dosa, starters and more, with listed AUD prices.">
+ <title>Our Menu — Mythri Indian Restaurant</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body class="menu-page">
+ <a class="skip" href="#main">Skip to menu</a>
+ <header class="nav" id="top">
+  <a class="logo" href="/" aria-label="Mythri home"><span class="logo-mark" aria-hidden="true">✳</span><span class="logo-name">mythri<span class="logo-caption">INDIAN RESTAURANT</span></span></a>
+  <nav class="navlinks" id="navlinks" aria-label="Primary navigation"><a href="/#story">Our story</a><a href="/#experience">The experience</a><a href="/menu/" aria-current="page">The menu</a><a href="/#visit">Find us</a></nav>
+  <div class="nav-actions"><a class="navbook" href="/#reservations">Table enquiries <span aria-hidden="true">↗</span></a><button class="mobilebutton" id="mobilebutton" type="button" aria-controls="navlinks" aria-label="Open menu" aria-expanded="false">☰</button></div>
+ </header>
+ <main id="main">
+  <section class="menu-hero section-shell"><a class="menu-back" href="/">← Back to home</a><div class="menu-hero-grid"><div><span class="eyebrow">THE MYTHRI MENU</span><h1>Discover your <em>favourites.</em></h1></div><p>Something comforting, something new, something to share. Browse every dish from our kitchen, right here.</p></div><div class="menu-hero-rule"><span>13 CATEGORIES</span><span>99 DISHES</span><span>MADE TO SHARE</span></div></section>
+  <section class="menu-explorer section-shell" aria-label="Browse restaurant menu">
+   <div class="menu-explorer-layout">
+    <aside class="menu-sidebar" aria-label="Menu categories"><p class="menu-sidebar-heading">EXPLORE CATEGORIES</p><nav id="menu-categories" class="menu-category-list" aria-label="Select a menu category"></nav></aside>
+    <div class="menu-results">
+     <div class="menu-toolbar"><label class="menu-search" for="search"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><span class="sr-only">Search dishes by name or ingredient</span><input id="search" type="search" placeholder="Search dishes or ingredients" autocomplete="off" maxlength="120"></label><div class="menu-toolbar-actions"><label class="menu-veg-toggle"><input id="vegonly" type="checkbox"><span>Vegetarian only</span></label><button id="filter-reset" class="menu-reset" type="button" hidden>Clear filters</button></div></div>
+     <div class="menu-results-top"><div><span class="eyebrow">OUR KITCHEN</span><h2 id="results-heading">Explore our favourites</h2></div><span class="menu-results-count" id="menucount" role="status" aria-live="polite">99 dishes</span></div>
+     <div id="menugrid" class="menu-dish-list" aria-label="Matching dishes"></div><button id="showmore" class="menu-more" type="button" hidden>Show more dishes ↓</button>
+     <p class="menu-footnote">Prices shown in Australian dollars and subject to change. Please confirm current prices, ingredients and dietary needs directly with Mythri.</p>
+    </div>
+   </div>
+  </section>
+  <section class="menu-endcap"><div><span class="eyebrow">COME TOGETHER</span><h2>Good food tastes<br><em>better together.</em></h2></div><a class="primary-cta" href="/#reservations">Plan your visit <span aria-hidden="true">↗</span></a></section>
+ </main>
+ <footer class="footer"><div class="footer-brand">mythri<span>INDIAN RESTAURANT · NARRE WARREN SOUTH</span></div><div class="footer-right"><span>MADE TO SHARE. MADE WITH CARE.</span><span>© <span id="year"></span> MYTHRI</span><a href="/">BACK TO HOME ↑</a></div></footer>
+ <script type="module" src="/src/menu-page.js"></script>
+</body>
+</html>

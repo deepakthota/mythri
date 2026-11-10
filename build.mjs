@@ -9,6 +9,12 @@ let js=read('src/main.js').replace("import MENU from './menu.json';", `const MEN
 if(js.includes('import MENU')||js.includes('import CATEGORIES'))throw Error('Failed to inline menu JSON');
 writeFileSync(join(out,'assets/main.js'),js);
 copyFileSync(join(root,'src/styles.css'),join(out,'assets/styles.css'));
+copyFileSync(join(root,'src/menu-logic.js'),join(out,'assets/menu-logic.js'));
+let menuJs=read('src/menu-page.js').replace("import MENU from './menu.json';",`const MENU=${JSON.stringify(menu)};`).replace("import CATEGORIES from './categories.json';",`const CATEGORIES=${JSON.stringify(cats)};`);
+if(menuJs.includes('import MENU')||menuJs.includes('import CATEGORIES'))throw Error('Failed to inline menu page JSON');
+writeFileSync(join(out,'assets/menu-page.js'),menuJs);
+mkdirSync(join(out,'menu'),{recursive:true});
+writeFileSync(join(out,'menu/index.html'),read('menu/index.html').replace('/src/styles.css','/assets/styles.css').replace('/src/menu-page.js','/assets/menu-page.js'));
 let html=read('index.html').replace('/src/styles.css','/assets/styles.css').replace('/src/main.js','/assets/main.js');
 writeFileSync(join(out,'index.html'),html);
 for(const file of ['_headers','robots.txt']) copyFileSync(join(root,'public',file),join(out,file));

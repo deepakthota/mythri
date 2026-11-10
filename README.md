@@ -43,3 +43,11 @@ This is a front-end MVP, **not** an authenticated full-stack production reservat
 - `src/menu.json` and `src/categories.json`: editable restaurant content
 - `tests/menu.test.js`: data integrity tests
 - `.github/workflows/ci.yml`: build-and-test CI
+
+## V3 menu browsing (v0.2.0)
+
+- Homepage now contains four featured dishes with vegetarian/non-vegetarian avatar indicators. No generated or unverified dish photos are used for featured menu items.
+- `/menu/` is a dedicated full menu explorer with 13 category tabs, search, vegetarian filter, show-more pagination, and shareable URL state (`category`, `q`, `veg`).
+- All 99 dishes and prices remain in `src/menu.json`; the UI never fetches a third-party menu site.
+- Desktop: sticky category sidebar; tablet/mobile: horizontally scrolling category tabs.
+- All menu photography is intentionally omitted where an exact photo match and reuse rights were not verified. Existing editorial Unsplash photographs outside the new menu browsing UI remain unchanged.
