@@ -1,0 +1,695 @@
+[
+  {
+    "name": "Veg Samosa (2 pcs)",
+    "price": 9.0,
+    "desc": "Crisp pastry parcels with spiced potato and peas",
+    "cat": "Vegetarian Entrées",
+    "veg": true
+  },
+  {
+    "name": "Onion Bhaji",
+    "price": 9.99,
+    "desc": "Golden chickpea-battered onions",
+    "cat": "Vegetarian Entrées",
+    "veg": true
+  },
+  {
+    "name": "Papdi Chaat",
+    "price": 12.55,
+    "desc": "Crisp wafers, yoghurt and tamarind",
+    "cat": "Vegetarian Entrées",
+    "veg": true
+  },
+  {
+    "name": "Paneer Tikka",
+    "price": 17.98,
+    "desc": "Clay-roasted paneer with ginger and spices",
+    "cat": "Vegetarian Entrées",
+    "veg": true
+  },
+  {
+    "name": "Woodland Mushrooms",
+    "price": 16.0,
+    "desc": "Clay-oven mushrooms in yoghurt and garlic",
+    "cat": "Vegetarian Entrées",
+    "veg": true
+  },
+  {
+    "name": "Idly",
+    "price": 9.0,
+    "desc": "Steamed rice cakes with sambar and chutney",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Podi Idly",
+    "price": 10.0,
+    "desc": "Idly tossed in house podi and ghee",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Medu Vada",
+    "price": 11.0,
+    "desc": "Golden lentil fritters with curry leaves",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Idly Vada Combo",
+    "price": 13.0,
+    "desc": "Soft idly and crisp vada",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Mysore Bonda",
+    "price": 12.0,
+    "desc": "Fluffy savoury fritters",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Poori with Potato Curry",
+    "price": 15.0,
+    "desc": "Puffed bread and warmly spiced potato",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Plain Dosa",
+    "price": 10.0,
+    "desc": "Crisp fermented rice-and-lentil crêpe",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Ghee Roast Dosa",
+    "price": 12.0,
+    "desc": "Extra-crisp dosa with fragrant ghee",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Masala Dosa",
+    "price": 13.0,
+    "desc": "Crisp dosa with spiced potato",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Mysore Masala Dosa",
+    "price": 15.0,
+    "desc": "Dosa with Mysore chutney and potato",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Onion Dosa",
+    "price": 12.0,
+    "desc": "Crisp dosa with onion and coriander",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Cheese Dosa",
+    "price": 13.0,
+    "desc": "Dosa with warm melted cheese",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Egg Dosa",
+    "price": 14.0,
+    "desc": "Crisp dosa with seasoned egg",
+    "cat": "South Indian",
+    "veg": false
+  },
+  {
+    "name": "Egg Karam Dosa",
+    "price": 15.0,
+    "desc": "Egg dosa with fiery karam podi",
+    "cat": "South Indian",
+    "veg": false
+  },
+  {
+    "name": "Utappam",
+    "price": 12.0,
+    "desc": "Thick savoury pancake with vegetables",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Gheepodi Utappam",
+    "price": 14.0,
+    "desc": "Utappam with house spice topping",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Onion Utappam",
+    "price": 13.0,
+    "desc": "Soft utappam with onion and coriander",
+    "cat": "South Indian",
+    "veg": true
+  },
+  {
+    "name": "Veg Manchurian",
+    "price": 16.98,
+    "desc": "Vegetable dumplings in garlic-soy sauce",
+    "cat": "Indo-Chinese",
+    "veg": true
+  },
+  {
+    "name": "Gobi Manchurian",
+    "price": 16.98,
+    "desc": "Crisp cauliflower in tangy chilli sauce",
+    "cat": "Indo-Chinese",
+    "veg": true
+  },
+  {
+    "name": "Gobi 65",
+    "price": 16.98,
+    "desc": "Fried cauliflower with curry leaves",
+    "cat": "Indo-Chinese",
+    "veg": true
+  },
+  {
+    "name": "Paneer 65",
+    "price": 17.98,
+    "desc": "Crisp paneer with chilli and curry leaves",
+    "cat": "Indo-Chinese",
+    "veg": true
+  },
+  {
+    "name": "Paneer Manchurian",
+    "price": 17.98,
+    "desc": "Paneer with capsicum and garlic-soy sauce",
+    "cat": "Indo-Chinese",
+    "veg": true
+  },
+  {
+    "name": "Chilli Paneer",
+    "price": 17.98,
+    "desc": "Paneer with fresh chillies and peppers",
+    "cat": "Indo-Chinese",
+    "veg": true
+  },
+  {
+    "name": "Chicken 65",
+    "price": 17.98,
+    "desc": "Crisp chicken with ginger and curry leaves",
+    "cat": "Indo-Chinese",
+    "veg": false
+  },
+  {
+    "name": "Chicken Lollipop",
+    "price": 18.98,
+    "desc": "Spiced fried chicken winglets",
+    "cat": "Indo-Chinese",
+    "veg": false
+  },
+  {
+    "name": "Chicken Manchurian",
+    "price": 17.98,
+    "desc": "Chicken in a savoury garlic-soy sauce",
+    "cat": "Indo-Chinese",
+    "veg": false
+  },
+  {
+    "name": "Chicken Tikka",
+    "price": 17.98,
+    "desc": "Yoghurt-marinated clay-roasted chicken",
+    "cat": "Non-Veg Entrées",
+    "veg": false
+  },
+  {
+    "name": "Achari Chicken Tikka",
+    "price": 17.98,
+    "desc": "Pickle-spiced chicken from the tandoor",
+    "cat": "Non-Veg Entrées",
+    "veg": false
+  },
+  {
+    "name": "Seekh Kebab",
+    "price": 18.98,
+    "desc": "Chargrilled minced lamb skewers",
+    "cat": "Non-Veg Entrées",
+    "veg": false
+  },
+  {
+    "name": "Barrah Kebab",
+    "price": 18.98,
+    "desc": "Spiced clay-oven lamb cutlets",
+    "cat": "Non-Veg Entrées",
+    "veg": false
+  },
+  {
+    "name": "Tandoori Chicken (Half)",
+    "price": 16.0,
+    "desc": "Half chicken roasted in the clay oven",
+    "cat": "Non-Veg Entrées",
+    "veg": false
+  },
+  {
+    "name": "Tandoori Chicken (Full)",
+    "price": 30.0,
+    "desc": "Whole clay-oven-roasted chicken",
+    "cat": "Non-Veg Entrées",
+    "veg": false
+  },
+  {
+    "name": "Fish Tikka",
+    "price": 18.0,
+    "desc": "Clay-oven fish with fragrant herbs",
+    "cat": "Non-Veg Entrées",
+    "veg": false
+  },
+  {
+    "name": "Tandoori Prawns",
+    "price": 18.0,
+    "desc": "King prawns roasted in the clay oven",
+    "cat": "Non-Veg Entrées",
+    "veg": false
+  },
+  {
+    "name": "Paneer Butter Masala",
+    "price": 17.0,
+    "desc": "Paneer in tomato, butter and cashew sauce",
+    "cat": "Vegetarian Curries",
+    "veg": true
+  },
+  {
+    "name": "Paneer Makhani",
+    "price": 17.0,
+    "desc": "Paneer in rich tomato-butter gravy",
+    "cat": "Vegetarian Curries",
+    "veg": true
+  },
+  {
+    "name": "Kadai Paneer",
+    "price": 16.98,
+    "desc": "Paneer with peppers and kadai spices",
+    "cat": "Vegetarian Curries",
+    "veg": true
+  },
+  {
+    "name": "Palak Paneer",
+    "price": 15.5,
+    "desc": "Paneer in creamy spinach curry",
+    "cat": "Vegetarian Curries",
+    "veg": true
+  },
+  {
+    "name": "Matter Paneer",
+    "price": 16.0,
+    "desc": "Paneer with green peas",
+    "cat": "Vegetarian Curries",
+    "veg": true
+  },
+  {
+    "name": "Shahi Paneer",
+    "price": 16.0,
+    "desc": "Paneer with cashew and cream",
+    "cat": "Vegetarian Curries",
+    "veg": true
+  },
+  {
+    "name": "Methi Malai Mutter",
+    "price": 16.0,
+    "desc": "Green peas and fenugreek in cream",
+    "cat": "Vegetarian Curries",
+    "veg": true
+  },
+  {
+    "name": "Vegetable Madras",
+    "price": 17.0,
+    "desc": "Vegetables in coconut and curry-leaf gravy",
+    "cat": "Vegetarian Curries",
+    "veg": true
+  },
+  {
+    "name": "Bhindi Masala",
+    "price": 16.0,
+    "desc": "Okra with roasted Indian spices",
+    "cat": "Vegetarian Curries",
+    "veg": true
+  },
+  {
+    "name": "Dal Makhani",
+    "price": 16.0,
+    "desc": "Slow-cooked black lentils with butter",
+    "cat": "Vegetarian Curries",
+    "veg": true
+  },
+  {
+    "name": "Butter Chicken",
+    "price": 17.0,
+    "desc": "Clay-oven chicken in silky tomato-cream sauce",
+    "cat": "Chicken Curries",
+    "veg": false
+  },
+  {
+    "name": "Chicken Makhani",
+    "price": 17.0,
+    "desc": "Boneless chicken in rich tomato-butter gravy",
+    "cat": "Chicken Curries",
+    "veg": false
+  },
+  {
+    "name": "Chicken Jhalfrezi",
+    "price": 17.0,
+    "desc": "Chicken with capsicum, tomato and chillies",
+    "cat": "Chicken Curries",
+    "veg": false
+  },
+  {
+    "name": "Chicken Madras",
+    "price": 17.0,
+    "desc": "South Indian coconut and mustard-seed curry",
+    "cat": "Chicken Curries",
+    "veg": false
+  },
+  {
+    "name": "Methi Chicken",
+    "price": 17.0,
+    "desc": "Chicken with fragrant fenugreek",
+    "cat": "Chicken Curries",
+    "veg": false
+  },
+  {
+    "name": "Chicken Saag Korma",
+    "price": 17.0,
+    "desc": "Chicken in creamy spinach korma",
+    "cat": "Chicken Curries",
+    "veg": false
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "price": 17.0,
+    "desc": "Tandoori chicken in tomato-spice sauce",
+    "cat": "Chicken Curries",
+    "veg": false
+  },
+  {
+    "name": "Chicken Saag Gosht",
+    "price": 17.0,
+    "desc": "Chicken with spinach and warming spices",
+    "cat": "Chicken Curries",
+    "veg": false
+  },
+  {
+    "name": "Chicken Gongura",
+    "price": 17.0,
+    "desc": "Chicken with tangy gongura leaves",
+    "cat": "Chicken Curries",
+    "veg": false
+  },
+  {
+    "name": "Chicken Vindaloo",
+    "price": 17.0,
+    "desc": "Hot and tangy chilli-vinegar curry",
+    "cat": "Chicken Curries",
+    "veg": false
+  },
+  {
+    "name": "Fish Tikka Masala",
+    "price": 17.0,
+    "desc": "Fish in tomato-capsicum masala",
+    "cat": "Seafood",
+    "veg": false
+  },
+  {
+    "name": "Fish Malabar",
+    "price": 18.0,
+    "desc": "South Indian coconut fish curry",
+    "cat": "Seafood",
+    "veg": false
+  },
+  {
+    "name": "Fish Vindaloo",
+    "price": 18.0,
+    "desc": "Spicy coconut and vinegar fish curry",
+    "cat": "Seafood",
+    "veg": false
+  },
+  {
+    "name": "Prawn Malabar",
+    "price": 18.0,
+    "desc": "King prawns in coconut and curry leaves",
+    "cat": "Seafood",
+    "veg": false
+  },
+  {
+    "name": "Garlic Prawns",
+    "price": 18.0,
+    "desc": "King prawns sautéed with garlic and herbs",
+    "cat": "Seafood",
+    "veg": false
+  },
+  {
+    "name": "Malai Prawns",
+    "price": 18.0,
+    "desc": "Prawns in creamy cashew-coconut sauce",
+    "cat": "Seafood",
+    "veg": false
+  },
+  {
+    "name": "Chilli Garlic Prawns",
+    "price": 18.0,
+    "desc": "King prawns with chilli and garlic",
+    "cat": "Seafood",
+    "veg": false
+  },
+  {
+    "name": "Prawn Vindaloo",
+    "price": 18.0,
+    "desc": "Tangy, spicy king prawn curry",
+    "cat": "Seafood",
+    "veg": false
+  },
+  {
+    "name": "Lamb Rogan Josh",
+    "price": 18.9,
+    "desc": "Kashmiri-style lamb and spice gravy",
+    "cat": "Lamb & Goat",
+    "veg": false
+  },
+  {
+    "name": "Lamb Coconut Dry",
+    "price": 18.9,
+    "desc": "Lamb with coconut and curry leaves",
+    "cat": "Lamb & Goat",
+    "veg": false
+  },
+  {
+    "name": "Kadai Lamb",
+    "price": 18.98,
+    "desc": "Lamb with peppers and kadai spices",
+    "cat": "Lamb & Goat",
+    "veg": false
+  },
+  {
+    "name": "Lamb Shahi Korma",
+    "price": 18.98,
+    "desc": "Lamb in rich cashew-cream sauce",
+    "cat": "Lamb & Goat",
+    "veg": false
+  },
+  {
+    "name": "Lamb Saag",
+    "price": 18.98,
+    "desc": "Lamb with spinach and ginger",
+    "cat": "Lamb & Goat",
+    "veg": false
+  },
+  {
+    "name": "Lamb Do Piaza",
+    "price": 18.98,
+    "desc": "Lamb with onion and fragrant spices",
+    "cat": "Lamb & Goat",
+    "veg": false
+  },
+  {
+    "name": "Goat Curry",
+    "price": 18.98,
+    "desc": "Slow-cooked goat with whole spices",
+    "cat": "Lamb & Goat",
+    "veg": false
+  },
+  {
+    "name": "Goat Saag",
+    "price": 18.0,
+    "desc": "Goat and spinach curry",
+    "cat": "Lamb & Goat",
+    "veg": false
+  },
+  {
+    "name": "Goat Vindaloo",
+    "price": 18.0,
+    "desc": "Hot and tangy goat curry",
+    "cat": "Lamb & Goat",
+    "veg": false
+  },
+  {
+    "name": "Plain Rice",
+    "price": 6.0,
+    "desc": "Steamed fragrant basmati rice",
+    "cat": "Rice",
+    "veg": true
+  },
+  {
+    "name": "Saffron Rice",
+    "price": 8.0,
+    "desc": "Saffron-scented basmati rice",
+    "cat": "Rice",
+    "veg": true
+  },
+  {
+    "name": "Coconut Rice",
+    "price": 10.0,
+    "desc": "Basmati with coconut and curry leaves",
+    "cat": "Rice",
+    "veg": true
+  },
+  {
+    "name": "Zeera Rice",
+    "price": 12.0,
+    "desc": "Basmati tempered with toasted cumin",
+    "cat": "Rice",
+    "veg": true
+  },
+  {
+    "name": "Veg Fried Rice",
+    "price": 13.0,
+    "desc": "Wok-tossed rice with vegetables",
+    "cat": "Rice",
+    "veg": true
+  },
+  {
+    "name": "Egg Fried Rice",
+    "price": 14.0,
+    "desc": "Fried rice with egg and vegetables",
+    "cat": "Rice",
+    "veg": false
+  },
+  {
+    "name": "Chicken Fried Rice",
+    "price": 15.0,
+    "desc": "Wok-tossed rice with chicken",
+    "cat": "Rice",
+    "veg": false
+  },
+  {
+    "name": "Veg Noodles",
+    "price": 12.0,
+    "desc": "Noodles with vegetables and spring onion",
+    "cat": "Noodles",
+    "veg": true
+  },
+  {
+    "name": "Egg Noodles",
+    "price": 13.0,
+    "desc": "Noodles with egg, garlic and soy",
+    "cat": "Noodles",
+    "veg": false
+  },
+  {
+    "name": "Chicken Noodles",
+    "price": 14.0,
+    "desc": "Noodles with chicken and garlic-soy",
+    "cat": "Noodles",
+    "veg": false
+  },
+  {
+    "name": "Vegetable Dum Biryani",
+    "price": 16.0,
+    "desc": "Basmati layered with vegetables and saffron",
+    "cat": "Dum Biryanis",
+    "veg": true
+  },
+  {
+    "name": "Hyderabadi Chicken Dum Biryani",
+    "price": 18.0,
+    "desc": "Basmati layered with marinated chicken",
+    "cat": "Dum Biryanis",
+    "veg": false
+  },
+  {
+    "name": "Hyderabadi Goat Dum Biryani",
+    "price": 18.98,
+    "desc": "Fragrant rice with slow-cooked goat",
+    "cat": "Dum Biryanis",
+    "veg": false
+  },
+  {
+    "name": "Gobi 65 Biryani",
+    "price": 17.0,
+    "desc": "Biryani layered with crisp cauliflower 65",
+    "cat": "Special Biryanis",
+    "veg": true
+  },
+  {
+    "name": "Paneer 65 Biryani",
+    "price": 17.0,
+    "desc": "Biryani layered with crisp spiced paneer",
+    "cat": "Special Biryanis",
+    "veg": true
+  },
+  {
+    "name": "Chicken 65 Biryani",
+    "price": 17.0,
+    "desc": "Biryani layered with crisp spiced chicken",
+    "cat": "Special Biryanis",
+    "veg": false
+  },
+  {
+    "name": "Plain Naan",
+    "price": 3.0,
+    "desc": "Leavened bread baked in the clay oven",
+    "cat": "Breads",
+    "veg": true
+  },
+  {
+    "name": "Garlic Naan",
+    "price": 3.5,
+    "desc": "Naan with garlic and coriander",
+    "cat": "Breads",
+    "veg": true
+  },
+  {
+    "name": "Paneer Naan",
+    "price": 3.5,
+    "desc": "Naan stuffed with spiced paneer",
+    "cat": "Breads",
+    "veg": true
+  },
+  {
+    "name": "Cheese Naan",
+    "price": 4.0,
+    "desc": "Naan with melted cheese",
+    "cat": "Breads",
+    "veg": true
+  },
+  {
+    "name": "Chilli Naan",
+    "price": 4.0,
+    "desc": "Naan with chilli and coriander",
+    "cat": "Breads",
+    "veg": true
+  },
+  {
+    "name": "Cheese Chilli Naan",
+    "price": 4.5,
+    "desc": "Naan with cheese, chilli and coriander",
+    "cat": "Breads",
+    "veg": true
+  },
+  {
+    "name": "Kashmiri Naan",
+    "price": 5.0,
+    "desc": "Sweet naan with dried fruit and nuts",
+    "cat": "Breads",
+    "veg": true
+  }
+]
