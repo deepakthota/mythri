@@ -1,5 +1,6 @@
 import MENU from './menu.json';
 import CATEGORIES from './categories.json';
+import {buildDishAvatar} from './dish-images.js';
 import {PAGE_SIZE,getState,stateUrl,filterDishes,prioritizedDishes,toSlug} from './menu-logic.js';
 const $=id=>document.getElementById(id);
 const fmt=x=>new Intl.NumberFormat('en-AU',{style:'currency',currency:'AUD',minimumFractionDigits:Number.isInteger(x)?0:2,maximumFractionDigits:2}).format(x);
@@ -19,8 +20,7 @@ function createCategory(name){
 function renderCategories(){cats.replaceChildren();cats.append(createCategory('All'));for(const cat of CATEGORIES)cats.append(createCategory(cat.name));}
 function makeDish(dish){
  const card=document.createElement('article');card.className='menu-dish';
- const avatar=document.createElement('div');avatar.className='dish-avatar';avatar.setAttribute('aria-hidden','true');avatar.textContent='✳';
- const dot=document.createElement('span');dot.className='diet-dot '+(dish.veg?'veg':'nonveg');avatar.append(dot);
+ const avatar=buildDishAvatar(dish);
  const body=document.createElement('div');body.className='menu-dish-body';
  const title=document.createElement('h3');title.textContent=dish.name;
  const description=document.createElement('p');description.textContent=dish.desc;
