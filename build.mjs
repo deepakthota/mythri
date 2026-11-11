@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from 'node:fs';
 import { join } from 'node:path';
 const root=process.cwd();const out=join(root,'dist');
 mkdirSync(join(out,'assets'),{recursive:true});
+copyFileSync(join(root,'public/assets/mythri-mark.svg'),join(out,'assets/mythri-mark.svg'));
 const read=p=>readFileSync(join(root,p),'utf8');
 const menu=JSON.parse(read('src/menu.json'));
 const cats=JSON.parse(read('src/categories.json'));
