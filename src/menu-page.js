@@ -17,7 +17,18 @@ function createCategory(name){
  b.textContent=name;b.setAttribute('aria-pressed',String(state.category===name));
  b.addEventListener('click',()=>setState({category:name}));return b;
 }
-function renderCategories(){cats.replaceChildren();cats.append(createCategory('All'));for(const cat of CATEGORIES)cats.append(createCategory(cat.name));}
+function renderCategories(){
+ // Keep existing buttons mounted so keyboard focus survives filter updates.
+ if(!cats.childElementCount){
+   cats.append(createCategory('All'));
+   for(const cat of CATEGORIES)cats.append(createCategory(cat.name));
+ }
+ for(const button of cats.querySelectorAll('button')){
+   const selected=button.textContent===state.category;
+   button.classList.toggle('active',selected);
+   button.setAttribute('aria-pressed',String(selected));
+ }
+}
 function makeDish(dish){
  const card=document.createElement('article');card.className='menu-dish';
  const avatar=buildDishAvatar(dish);
