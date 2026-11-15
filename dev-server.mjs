@@ -4,7 +4,7 @@ import { resolve, extname, sep } from 'node:path';
 import { spawnSync } from 'node:child_process';
 const b=spawnSync(process.execPath,['build.mjs'],{stdio:'inherit'});if(b.status!==0)process.exit(b.status??1);
 const root=resolve('dist');const port=Number(process.env.PORT)||4173;
-const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.txt':'text/plain; charset=utf-8'};
+const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.txt':'text/plain; charset=utf-8','.svg':'image/svg+xml','.json':'application/json; charset=utf-8'};
 createServer((req,res)=>{
  const path=resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));
  if(!(path===root||path.startsWith(root+sep))){res.writeHead(403);res.end();return;}
