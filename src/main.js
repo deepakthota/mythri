@@ -22,6 +22,24 @@ for(const name of featuredNames){
 $('mobilebutton').addEventListener('click',()=>{const open=$('navlinks').classList.toggle('open');$('mobilebutton').setAttribute('aria-expanded',String(open));$('mobilebutton').textContent=open?'×':'☰'});document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>{$('navlinks').classList.remove('open');$('mobilebutton').setAttribute('aria-expanded','false');$('mobilebutton').textContent='☰'}));
 const today=new Date();const localDate=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);$('bookdate').min=localDate;$('year').textContent=today.getFullYear();
 $('bookingform').addEventListener('submit',e=>{e.preventDefault();const dt=$('bookdate').value;if(!dt||dt<localDate){$('bookingresult').textContent='Choose today or a later date.';return}const name=$('bookname').value.trim(),phone=$('bookphone').value.trim();if(!name||!phone)return;const msg=`MYTHRI TABLE ENQUIRY\nName: ${name}\nPhone: ${phone}\nPreferred date: ${dt}\nPreferred time: ${$('booktime').value}\nGuests: ${$('guests').value}\nNotes: ${$('booknotes').value.trim()||'None'}\n\nThis is an enquiry, not a confirmed booking.`;const wrap=$('bookingresult');wrap.replaceChildren();const p=document.createElement('p');p.className='note';p.textContent='Your enquiry is ready. Copy the details and call Mythri on (03) 9704 7684. Your reservation is not confirmed.';const b=document.createElement('button');b.type='button';b.className='pill';b.classList.add('copy-btn');b.textContent='Copy enquiry details ↗';b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(msg);b.textContent='Copied ✓'}catch{const t=document.createElement('textarea');t.value=msg;wrap.append(t);t.focus();t.select();b.textContent='Select and copy details below'}});wrap.append(p,b)});
-if('IntersectionObserver' in window){const observer=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.09});document.querySelectorAll('.reveal').forEach(e=>observer.observe(e))}else document.querySelectorAll('.reveal').forEach(e=>e.classList.add('visible'));window.addEventListener('scroll',()=>{$('totop').classList.toggle('show',window.scrollY>900)},{passive:true});
+// Content stays visible by default if scripts or observation fail.
+if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+ const reveals=[...document.querySelectorAll('.reveal')];
+ const observer=new IntersectionObserver(entries=>{
+  for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}
+ },{threshold:.09});
+ // Only enable the effect after the observer has been created.
+ for(const el of reveals){observer.observe(el)}
+ document.documentElement.classList.add('motion-ready');
+}else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));window.addEventListener('scroll',()=>{$('totop').classList.toggle('show',window.scrollY>900)},{passive:true});
 
-$('totop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+$('totop').addEventListener('click',()=>window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
+// Escape closes the mobile menu in every browser that supports keyboard input.
+document.addEventListener('keydown',event=>{
+ if(event.key==='Escape' && $('navlinks').classList.contains('open')){
+  $('navlinks').classList.remove('open');
+  $('mobilebutton').setAttribute('aria-expanded','false');
+  $('mobilebutton').textContent='☰';
+  $('mobilebutton').focus();
+ }
+});
