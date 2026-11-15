@@ -1,3 +1,12 @@
+# v0.2.2 — Interop compatibility
+
+- Preserve keyboard focus on category selection.
+- Keep scroll-reveal content visible when scripting fails or reduced motion is enabled.
+- Ensure hidden controls are actually hidden across engines.
+- Close mobile navigation with Escape and restore focus.
+- Serve SVG with the correct media type.
+- Add no-script guidance, regression tests and cross-browser smoke tests in Chromium, Firefox and WebKit.
+
 # v0.2.1 — menu polish
 
 - Title Case navigation and Table Enquiries on home and menu pages.
