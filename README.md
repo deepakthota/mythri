@@ -5,7 +5,6 @@ Editorial restaurant website inspired by Northern Vessel's visual pacing, with M
 ## Run locally
 
 ```bash
-npm ci
 npm run dev
 ```
 
@@ -34,6 +33,18 @@ Menu content was transcribed from https://mythri.com.au/menu/ for the prototype.
 ## Security and deployment notes
 
 This is a front-end MVP, **not** an authenticated full-stack production reservation service. It does not collect/store booking information on a server and never claims a reservation is confirmed. For real bookings, build a trusted server-side service with availability inventory, atomic booking, anti-abuse limits, CSRF controls as needed, validation, confirmation notifications, appropriate retention and a protected admin dashboard. Harden CSP by bundling/self-hosting fonts, removing inline styling, and restricting image origins. Assess accessibility and carry out penetration, dependency and browser testing prior to launch.
+
+## Browser compatibility
+
+The site uses progressive enhancement and established browser features. `npm run check` verifies application tests and builds. GitHub Actions now also runs smoke tests on Chromium, Firefox and WebKit. They cover menu filters, history, mobile keyboard navigation and reduced motion. Browser-engine smoke tests do not guarantee identical visual rendering or full accessibility.
+
+To run browser smoke tests locally (optional):
+
+```bash
+npm install --no-save @playwright/test
+npx playwright install chromium firefox webkit
+npx playwright test
+```
 
 ## Structure
 
