@@ -66,3 +66,12 @@ $('mobilebutton').addEventListener('click',()=>{const open=$('navlinks').classLi
 document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>{$('navlinks').classList.remove('open');$('mobilebutton').setAttribute('aria-expanded','false');$('mobilebutton').textContent='☰'}));
 $('year').textContent=new Date().getFullYear();
 render();
+// Provide predictable keyboard dismissal of the responsive navigation.
+document.addEventListener('keydown',event=>{
+ if(event.key==='Escape' && $('navlinks').classList.contains('open')){
+  $('navlinks').classList.remove('open');
+  $('mobilebutton').setAttribute('aria-expanded','false');
+  $('mobilebutton').textContent='☰';
+  $('mobilebutton').focus();
+ }
+});
