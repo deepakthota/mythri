@@ -34,6 +34,18 @@ Menu content was transcribed from https://mythri.com.au/menu/ for the prototype.
 
 This is a front-end MVP, **not** an authenticated full-stack production reservation service. It does not collect/store booking information on a server and never claims a reservation is confirmed. For real bookings, build a trusted server-side service with availability inventory, atomic booking, anti-abuse limits, CSRF controls as needed, validation, confirmation notifications, appropriate retention and a protected admin dashboard. Harden CSP by bundling/self-hosting fonts, removing inline styling, and restricting image origins. Assess accessibility and carry out penetration, dependency and browser testing prior to launch.
 
+## GitHub Pages deployment
+
+The site is configured to publish automatically from `main` to:
+
+`https://deepakthota.github.io/mythri/`
+
+The workflow `.github/workflows/deploy-pages.yml` builds with `PUBLIC_BASE_PATH=/mythri`, checks menu routes and local assets, and deploys the `dist/` directory.
+
+**One-time repository-owner setup is required:** open [Settings → Pages](https://github.com/deepakthota/mythri/settings/pages). Under **Build and deployment → Source**, choose **GitHub Actions**. GitHub Actions cannot create the initial Pages site with the current repository token (403). After enabling it, open [Deploy Mythri to GitHub Pages](https://github.com/deepakthota/mythri/actions/workflows/deploy-pages.yml), select **Run workflow** on `main` (or rerun the most recent failed job). Wait for the deploy action to complete before treating the website URL as live.
+
+Note: GitHub Pages is a static hosting platform. The `public/_headers` file is not interpreted by GitHub Pages; configure enforceable security headers on a host that supports them if you migrate to production. Reservation enquiries are not submitted or confirmed server-side.
+
 ## Browser compatibility
 
 The site uses progressive enhancement and established browser features. `npm run check` verifies application tests and builds. GitHub Actions now also runs smoke tests on Chromium, Firefox and WebKit. They cover menu filters, history, mobile keyboard navigation and reduced motion. Browser-engine smoke tests do not guarantee identical visual rendering or full accessibility.
