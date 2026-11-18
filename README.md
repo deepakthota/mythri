@@ -1,3 +1,11 @@
+## SEO and demo conversion (v0.3.0)
+
+The GitHub Pages instance is an independent **demo** and is not the official `mythri.com.au` website. Canonical URLs are self-referencing for the demo. Do not present the demo as the canonical business listing without the restaurant's approval.
+
+The build creates `sitemap.xml`, includes all published menu dishes in initial HTML, and preserves interactive filters. The project-path `/mythri/robots.txt` does not control the GitHub Pages origin-level `/robots.txt`. The sitemap can be submitted to Search Console by a verified owner.
+
+Phone and directions links are real actions. Enquiries only prepare copyable text and **do not** book a table. No order checkout has been added because no official ordering-provider account or link has been verified. Do not claim conversions or revenue without proper attribution and consent-aware analytics integration. Verify the address, menu prices, dietary details, opening hours and business status before publishing as the restaurant's production site.
+
 # Mythri Restaurant — website MVP
 
 Editorial restaurant website inspired by Northern Vessel's visual pacing, with Mythri's own identity and exact brand colors. Built as a dependency-free, accessible web application using semantic HTML, CSS and vanilla JavaScript.
