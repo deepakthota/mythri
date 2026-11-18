@@ -1,3 +1,12 @@
+## v0.3.0 — Demo SEO, local discovery and conversion
+
+- Localized titles, descriptions, H1 copy, social metadata and canonicals for the GitHub Pages demo.
+- Enriched existing Restaurant JSON-LD without unverified hours, reviews or ordering claims.
+- Generated initial HTML for all menu dishes; client-side filters still work.
+- Generated XML sitemap and project-site robots reference.
+- Added prominent phone CTA and crawlable restaurant contact information in the footer.
+- No changes to the actual mythri.com.au website or reservation/order functionality.
+
 # v0.2.2 — Interop compatibility
 
 - Preserve keyboard focus on category selection.
