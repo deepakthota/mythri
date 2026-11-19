@@ -9,7 +9,8 @@ test('homepage and menu have distinct canonical URLs and local titles',()=>{
  const menu=read('menu/index.html');
  assert.match(homepage,/rel="canonical" href="https:\/\/deepakthota\.github\.io\/mythri\/"/);
  assert.match(menu,/rel="canonical" href="https:\/\/deepakthota\.github\.io\/mythri\/menu\/"/);
- assert.match(homepage,/<h1[^>]*>Indian dining in/);
+ assert.match(homepage,/<h1[^>]*>Authentic Indian Food in/);
+ assert.match(homepage,/Crafted for Family &amp; Friends/);
  assert.match(menu,/<h1>Explore our Indian menu/);
  assert.match(homepage,/type="application\/ld\+json"/);
  assert.match(homepage,/"@type":"Restaurant"/);
@@ -27,6 +28,6 @@ test('build includes 99 crawlable dishes and two sitemap URLs',()=>{
 test('call and directions affordances are present without unverified checkout',()=>{
  const home=read('index.html');
  assert.match(home,/href="tel:\+61397047684"/);
- assert.match(home,/Get directions/);
+ assert.match(home,/Get Directions/);
  assert.doesNotMatch(home,/href="[^"]*"[^>]*>Order Online/i);
 });
