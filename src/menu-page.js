@@ -33,12 +33,14 @@ function makeDish(dish){
  const card=document.createElement('article');card.className='menu-dish';
  const avatar=buildDishAvatar(dish);
  const body=document.createElement('div');body.className='menu-dish-body';
+ const titleRow=document.createElement('div');titleRow.className='menu-dish-title-row';
  const title=document.createElement('h3');title.textContent=dish.name;
+ const price=document.createElement('span');price.className='menu-dish-price';price.textContent=fmt(dish.price);
+ titleRow.append(title,price);
  const description=document.createElement('p');description.textContent=dish.desc;
  const diet=document.createElement('span');diet.className='diet-label';diet.textContent=dish.veg?'Vegetarian':'Non-vegetarian';
- body.append(title,description,diet);
- const price=document.createElement('span');price.className='menu-dish-price';price.textContent=fmt(dish.price);
- card.append(avatar,body,price);return card;
+ body.append(titleRow,description,diet);
+ card.append(avatar,body);return card;
 }
 function render(){
  search.value=state.search;veg.checked=state.veg;renderCategories();
