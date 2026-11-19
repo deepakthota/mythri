@@ -4,7 +4,7 @@ The GitHub Pages instance is an independent **demo** and is not the official `my
 
 The build creates `sitemap.xml`, includes all published menu dishes in initial HTML, and preserves interactive filters. The project-path `/mythri/robots.txt` does not control the GitHub Pages origin-level `/robots.txt`. The sitemap can be submitted to Search Console by a verified owner.
 
-Phone and directions links are real actions. Enquiries only prepare copyable text and **do not** book a table. No order checkout has been added because no official ordering-provider account or link has been verified. Do not claim conversions or revenue without proper attribution and consent-aware analytics integration. Verify the address, menu prices, dietary details, opening hours and business status before publishing as the restaurant's production site.
+Phone and directions links are real actions. The simulated reservation-enquiry form was removed in v0.3.1; **no reservations are booked**. No order checkout has been added because no official ordering-provider account or link has been verified. Do not claim conversions or revenue without proper attribution and consent-aware analytics integration. Verify the address, menu prices, dietary details, opening hours and business status before publishing as the restaurant's production site.
 
 # Mythri Restaurant — website MVP
 
@@ -27,11 +27,17 @@ npm run preview
 
 The resulting `dist/` can be deployed to a static host. `public/_headers` provides a baseline set of headers for hosts supporting Netlify-style `_headers`; for other hosts, configure equivalent headers at the platform/edge level. `upgrade-insecure-requests` assumes production is served via HTTPS.
 
+## Shared design components
+
+`src/components/footer.html` is injected into each HTML page by `build.mjs`. All pages therefore share the same footer structure and contact links, with only the city (not full street address) repeated below the homepage's detailed Visit section.
+
+The `/menu/` page displays a compact, image-led gallery on wide screens and narrow mobile rows. Only previously verified Unsplash dish photographs are mapped; unmatched dishes show vegetarian/non-vegetarian color-coded placeholders. `src/menu.json` is the single source of menu text and prices. Search filtering, URL state and build-time HTML remain intact.
+
 ## Features
 
 - Native menu browsing — 99 items in 13 categories, searchable, category-filtered and vegetarian-filtered; data stored in `src/menu.json`.
 - Responsive editorial layout, mobile navigation, contact/directions and accessible form controls.
-- Reservation *enquiry preparation* only: data stays in the browser and the user must call Mythri; **no table is booked, submitted, or stored**.
+- Direct Call Mythri and Get Directions links in place of the previous nonfunctional reservation-enquiry preparation form; **no table is booked, submitted, or stored**.
 - Stable, reviewed design tokens: cream `#F9F6F0`, sage `#8A9A86`, walnut `#3E3227`, aged gold `#D4AF37`, brass `#C5A059`.
 
 ## Content status
@@ -52,7 +58,7 @@ The workflow `.github/workflows/deploy-pages.yml` builds with `PUBLIC_BASE_PATH=
 
 **One-time repository-owner setup is required:** open [Settings → Pages](https://github.com/deepakthota/mythri/settings/pages). Under **Build and deployment → Source**, choose **GitHub Actions**. GitHub Actions cannot create the initial Pages site with the current repository token (403). After enabling it, open [Deploy Mythri to GitHub Pages](https://github.com/deepakthota/mythri/actions/workflows/deploy-pages.yml), select **Run workflow** on `main` (or rerun the most recent failed job). Wait for the deploy action to complete before treating the website URL as live.
 
-Note: GitHub Pages is a static hosting platform. The `public/_headers` file is not interpreted by GitHub Pages; configure enforceable security headers on a host that supports them if you migrate to production. Reservation enquiries are not submitted or confirmed server-side.
+Note: GitHub Pages is a static hosting platform. The `public/_headers` file is not interpreted by GitHub Pages; configure enforceable security headers on a host that supports them if you migrate to production. No booking system is provided; customers can call to enquire about availability.
 
 ## Browser compatibility
 
@@ -70,7 +76,7 @@ npx playwright test
 
 - `index.html`: semantic page content
 - `src/styles.css`: design system and responsive layouts
-- `src/main.js`: menu filtering, navigation and local enquiry interaction
+- `src/main.js`: homepage featured menu, navigation and scroll interactions
 - `src/menu.json` and `src/categories.json`: editable restaurant content
 - `tests/menu.test.js`: data integrity tests
 - `.github/workflows/ci.yml`: build-and-test CI
