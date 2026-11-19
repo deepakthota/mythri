@@ -1,5 +1,5 @@
 // Pure filtering and URL-state helpers, shared by the menu page and automated tests.
-export const PAGE_SIZE=10;
+export const PAGE_SIZE=12;
 export const FEATURED_NAMES=[
  'Hyderabadi Chicken Dum Biryani','Butter Chicken','Masala Dosa','Paneer Tikka',
  'Veg Samosa (2 pcs)','Chicken 65','Vegetable Dum Biryani','Paneer 65 Biryani'
