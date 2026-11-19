@@ -8,7 +8,7 @@ test('homepage loads real brand logo and native navigation',async({page})=>{
 });
 test('menu category filters and browser back work',async({page})=>{
  await page.goto('/menu/');
- await expect(page.locator('#menugrid article')).toHaveCount(10);
+ await expect(page.locator('#menugrid article')).toHaveCount(12);
  const first=page.locator('#menu-categories button').nth(1);
  const name=await first.textContent();
  await first.focus();
@@ -26,7 +26,7 @@ test('search, vegetarian filter and clear controls work',async({page})=>{
  await page.locator('#vegonly').check();
  await expect(page.locator('#menugrid article').first()).toContainText('Vegetarian');
  await page.locator('#filter-reset').click();
- await expect(page.locator('#menugrid article')).toHaveCount(10);
+ await expect(page.locator('#menugrid article')).toHaveCount(12);
 });
 test('mobile menu supports keyboard Escape',async({page})=>{
  await page.setViewportSize({width:375,height:812});
@@ -56,7 +56,7 @@ test('menu cards display image-led gallery and no horizontal overflow',async({pa
  for(const width of [320,375,600,768,1024,1440]){
   await page.setViewportSize({width,height:900});
   await page.goto('/menu/');
-  await expect(page.locator('#menugrid article')).toHaveCount(10);
+  await expect(page.locator('#menugrid article')).toHaveCount(12);
   const cols=await page.locator('#menugrid').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length);
   expect(cols).toBe(width<=650?1:width>=1320?3:2);
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);
