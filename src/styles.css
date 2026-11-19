@@ -96,3 +96,53 @@
 .footer-address{font-style:normal;letter-spacing:normal;font:400 12px/1.8 var(--body);margin-top:18px;max-width:340px;color:var(--cream)}
 .footer-address a{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:600px){.hero-actions{align-items:stretch;gap:8px}.hero-secondary{min-height:44px}}
+
+
+/* V3.2 — editorial hierarchy, single shared footer and image-led menu gallery */
+.hero-message{max-width:690px}
+.hero-message h1{font-size:clamp(44px,4.45vw,78px);line-height:1.13;letter-spacing:-.052em;margin-bottom:22px}
+.hero-message h1 em{display:block;color:#60745c;font-style:italic}
+.hero-tagline{display:block;margin-top:24px;font:400 clamp(23px,2.45vw,38px)/1.28 var(--heading);letter-spacing:-.025em;color:var(--walnut)}
+.hero-actions{column-gap:48px;row-gap:18px}
+.hero-secondary{padding-inline:4px;white-space:nowrap}
+.visit{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,64px)}
+.visit-heading>p{font-size:14px;line-height:1.85;color:var(--muted);max-width:340px;margin:20px 0 0}
+.visit-info .visit-call{margin-top:14px;gap:22px}
+.footer{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,.65fr);align-items:start;gap:42px 60px;padding:52px clamp(24px,5vw,80px) 28px}
+.footer-brand{font-size:38px}
+.footer-motto{font:400 13px/1.8 var(--body);color:#d0c7bc;letter-spacing:0;margin:20px 0 0}
+.footer-contact{display:flex;flex-direction:column;align-items:flex-start;gap:12px;font-size:13px;line-height:1.5;color:#e4ded4}
+.footer-contact .footer-label{font-size:10px;letter-spacing:.14em;font-weight:700;color:#c7c0b6;margin-bottom:5px}
+.footer-contact a:hover,.footer-contact a:focus-visible{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.footer-bottom{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--darkline);padding-top:20px;color:#c7c0b6;font:600 10px/1.6 var(--body);letter-spacing:.09em}
+.footer-bottom a:hover{color:#fff}
+.menu-dish-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px;align-items:start}
+.menu-dish{display:flex;flex-direction:column;min-width:0;gap:0;padding:0;border-top:0}
+.menu-dish .dish-avatar{width:100%;height:auto;aspect-ratio:4/3;flex:none;border:0;border-radius:6px;font-size:clamp(28px,3.5vw,46px);overflow:hidden}
+.menu-dish .dish-avatar .dish-photo{width:100%;height:100%}
+.menu-dish-body{min-width:0;padding:13px 1px 0}
+.menu-dish-title-row{display:flex;align-items:start;justify-content:space-between;gap:10px}
+.menu-dish h3{flex:1;min-width:0;font:400 clamp(17px,1.28vw,20px)/1.27 var(--heading);margin:0 0 7px;letter-spacing:-.025em;overflow-wrap:break-word}
+.menu-dish-price{flex:none;font-size:12px;font-weight:700;padding:3px 0 0;white-space:nowrap;font-variant-numeric:tabular-nums}
+.menu-dish-body p{font-size:12px;line-height:1.6;margin:0 0 8px;color:var(--muted)}
+.menu-dish .diet-label{font-size:10px}
+.menu-more{margin-top:36px}
+@media(min-width:1320px){.menu-dish-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 20px}}
+@media(max-width:1050px){.menu-dish-list{gap:26px 16px}}
+@media(max-width:850px){.visit{grid-template-columns:repeat(2,minmax(0,1fr))}.visit-heading{grid-column:1/-1}.menu-dish-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}}
+@media(max-width:650px){
+ .hero-message h1{font-size:clamp(40px,9.1vw,60px)}
+ .hero-tagline{font-size:clamp(22px,5.2vw,29px);margin-top:18px}
+ .hero-actions{gap:12px 20px;align-items:flex-start}
+ .footer{grid-template-columns:1fr;padding:42px 24px 26px;gap:26px}
+ .footer-bottom{gap:14px}
+ .visit{grid-template-columns:1fr;gap:28px}.visit-heading{grid-column:auto}
+ .menu-dish-list{grid-template-columns:1fr;gap:16px}
+ .menu-dish{display:grid;grid-template-columns:94px minmax(0,1fr);gap:14px;padding:0 0 16px;border-bottom:1px solid var(--line)}
+ .menu-dish .dish-avatar{width:94px;height:94px;aspect-ratio:1;border-radius:6px;font-size:28px}
+ .menu-dish-body{padding:1px 0 0}
+ .menu-dish h3{font-size:18px}
+ .menu-dish-body p{font-size:12px;line-height:1.5;margin-bottom:6px}
+ .menu-dish-price{font-size:12px}
+}
+@media(max-width:380px){.menu-dish{grid-template-columns:76px minmax(0,1fr);gap:11px}.menu-dish .dish-avatar{width:76px;height:76px}.menu-dish h3{font-size:17px}.hero-actions .primary-cta{gap:20px}}
