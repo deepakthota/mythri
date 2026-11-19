@@ -1,3 +1,13 @@
+## v0.3.1 — Hero, shared footer, and gallery UX
+
+- Update hero to “Authentic Indian Food in Narre Warren South” with emphasized locality and a smaller “Crafted for Family & Friends” line.
+- Separate Explore Our Menu and Call Mythri actions with clearer spacing and hierarchy.
+- Remove the nonfunctional reservation-enquiry preparation form; replace it with genuine call and directions actions in the Visit section.
+- Reuse a single shared footer template across homepage and menu; avoid duplicating the full street address right above it.
+- Change full menu to a compact image-led card grid on larger screens, with space-efficient horizontal rows on narrow phones.
+- Keep only previously verified free-use food photographs; color-coded avatars are used for all unmatched dishes.
+- Preserve crawlable menu HTML, search/category filters, URLs, SEO tags and GitHub Pages deployment.
+
 ## v0.3.0 — Demo SEO, local discovery and conversion
 
 - Localized titles, descriptions, H1 copy, social metadata and canonicals for the GitHub Pages demo.
