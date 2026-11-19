@@ -24,7 +24,8 @@ test('default menu prioritizes featured dishes but honors filters',()=>{
  const state={category:'All',search:'',veg:false};
  const list=prioritizedDishes(filterDishes(menu,state),state);
  assert.equal(list[0].name,FEATURED_NAMES[0]);assert.equal(list.length,99);
- assert.equal(list.slice(0,PAGE_SIZE).length,10);
+ assert.equal(PAGE_SIZE,12);
+ assert.equal(list.slice(0,PAGE_SIZE).length,12);
  const only=filterDishes(menu,{category:'Chicken Curries',search:'butter',veg:false});
  assert.ok(only.some(d=>d.name==='Butter Chicken'));assert.ok(only.every(d=>d.cat==='Chicken Curries'));
 });
