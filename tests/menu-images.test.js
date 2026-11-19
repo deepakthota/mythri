@@ -25,7 +25,7 @@ test('build includes reusable image helper and both menu entrypoints import it',
 test('navigation labels are title cased on both pages',()=>{
  for(const page of ['index.html','menu/index.html']){
   const html=read(page);
-  for(const label of ['Our Story','The Experience','The Menu','Find Us','Table Enquiries'])assert.ok(html.includes('>'+label+'<')||html.includes('>'+label+' '),page+' missing '+label);
+  for(const label of ['Our Story','The Experience','The Menu','Find Us','Plan Your Visit'])assert.ok(html.includes('>'+label+'<')||html.includes('>'+label+' '),page+' missing '+label);
  }
 });
 test('desktop kitchen image aligns with menu panel while mobile heights remain bounded',()=>{
