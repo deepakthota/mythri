@@ -10,7 +10,7 @@ test('homepage and menu have distinct canonical URLs and local titles',()=>{
  assert.match(homepage,/rel="canonical" href="https:\/\/deepakthota\.github\.io\/mythri\/"/);
  assert.match(menu,/rel="canonical" href="https:\/\/deepakthota\.github\.io\/mythri\/menu\/"/);
  assert.match(homepage,/<h1[^>]*>Authentic Indian Food in/);
- assert.match(homepage,/Crafted for Family &amp; Friends/);
+ assert.match(homepage,/<h2>\s*<span class="hero-tagline">Crafted for Sharing<\/span>\s*<\/h2>/);
  assert.match(menu,/<h1>Explore our Indian menu/);
  assert.match(homepage,/type="application\/ld\+json"/);
  assert.match(homepage,/"@type":"Restaurant"/);
