@@ -42,3 +42,24 @@ test('reduced motion preserves content visibility',async({page})=>{
  await page.goto('/');
  await expect(page.locator('.story .reveal').first()).toHaveCSS('opacity','1');
 });
+
+test('shared footer and real visit CTA replace nonfunctional form',async({page})=>{
+ await page.goto('/');
+ await expect(page.locator('footer .footer-contact')).toBeVisible();
+ await expect(page.locator('#bookingform')).toHaveCount(0);
+ await expect(page.locator('.visit-call')).toHaveAttribute('href','tel:+61397047684');
+ await page.getByRole('link',{name:'The Menu'}).click();
+ await expect(page.locator('footer .footer-contact')).toBeVisible();
+ await expect(page.locator('.menu-endcap .primary-cta')).toHaveAttribute('href','/#visit');
+});
+test('menu cards display image-led gallery and no horizontal overflow',async({page})=>{
+ for(const width of [320,375,600,768,1024,1440]){
+  await page.setViewportSize({width,height:900});
+  await page.goto('/menu/');
+  await expect(page.locator('#menugrid article')).toHaveCount(10);
+  const cols=await page.locator('#menugrid').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length);
+  expect(cols).toBe(width<=650?1:width>=1320?3:2);
+  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);
+  expect(overflow, 'horizontal overflow at '+width+'px').toBe(false);
+ }
+});
