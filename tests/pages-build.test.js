@@ -23,11 +23,15 @@ test('GitHub Pages build keeps home, menu, logo and browser-history paths under 
   assert.match(home,/href="\/mythri\/menu\/"/);
   assert.match(home,/src="\/mythri\/assets\/mythri-mark\.svg"/);
   assert.match(home,/href="\/mythri\/assets\/styles\.css"/);
-  assert.match(menu,/href="\/mythri\/#reservations"/);
+  assert.match(menu,/href="\/mythri\/#visit"/);
   assert.match(menu,/src="\/mythri\/assets\/menu-page\.js"/);
   assert.match(logic,/return '\/mythri\/menu\/'\+/);
   assert.ok(existsSync(join(root,'dist','assets','mythri-mark.svg')));
   assert.ok(existsSync(join(root,'dist','.nojekyll')));
+  assert.match(home,/<footer class="footer">/);
+  assert.match(menu,/<footer class="footer">/);
+  assert.doesNotMatch(home,/BUILD:SHARED_FOOTER/);
+  assert.doesNotMatch(menu,/BUILD:SHARED_FOOTER/);
  }finally{build('')}
 });
 test('default build preserves root-relative paths for non-Pages hosting',()=>{
